@@ -11,6 +11,7 @@ FROM
 WHERE
     cat.name = 'Animation'
     OR cat.name = 'Children'
+    OR t1.name = 'Classics'
     OR cat.name = 'Comedy'
     OR cat.name = 'Family'
     OR cat.name = 'Music'
