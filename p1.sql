@@ -1,7 +1,7 @@
 SELECT
     fil.title AS film_title,
     cat.name AS category_name,
-    count(to_char(rental_date, 'YYYY-MM-DD')) AS rental_day
+    count(to_char(rent.rental_date, 'YYYY-MM-DD')) AS rental_count
 FROM
     category AS cat
     JOIN film_category AS film_cat ON cat.category_id = film_cat.category_id
@@ -11,7 +11,7 @@ FROM
 WHERE
     cat.name = 'Animation'
     OR cat.name = 'Children'
-    OR t1.name = 'Classics'
+    OR cat.name = 'Classics'
     OR cat.name = 'Comedy'
     OR cat.name = 'Family'
     OR cat.name = 'Music'
