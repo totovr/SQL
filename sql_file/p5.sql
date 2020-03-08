@@ -8,7 +8,6 @@ FROM
     JOIN customer AS cus ON pay.customer_id = cus.customer_id
 WHERE
     DATE_PART('year', pay.payment_date) = '2007'
-    AND CONCAT(cus.first_name, ' ', cus.last_name) = 'Ana Bradley'
 GROUP BY
     1,
     2
