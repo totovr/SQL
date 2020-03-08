@@ -1,7 +1,7 @@
 SELECT
     fil.title AS film_title,
     cat.name AS category_name,
-    count(to_char(rent.rental_date, 'YYYY-MM-DD')) AS rental_count
+    count(DATE(rent.rental_date)) AS rental_count
 FROM
     category AS cat
     JOIN film_category AS film_cat ON cat.category_id = film_cat.category_id
@@ -19,4 +19,4 @@ GROUP BY
     1,
     2
 ORDER BY
-    2
+    2;

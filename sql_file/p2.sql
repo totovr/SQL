@@ -18,4 +18,4 @@ WHERE
     OR name = 'Family'
     OR name = 'Music'
 ORDER BY
-    3
+    3;

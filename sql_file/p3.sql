@@ -28,4 +28,4 @@ GROUP BY
     2
 ORDER BY
     1,
-    2
+    2;
