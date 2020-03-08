@@ -1,11 +1,11 @@
 SELECT
     DATE_PART('month', rent.rental_date) as Month_year,
     DATE_PART('year', rent.rental_date) as Rental_year,
-    invent.store_id AS Store_ID,
+    sta.store_id AS Store_ID,
     COUNT(*) AS Count_rentals
 FROM
-    inventory AS invent
-    JOIN rental AS rent ON rent.inventory_id = invent.inventory_id
+    rental AS rent
+    JOIN staff AS sta ON rent.staff_id = sta.staff_id
 GROUP BY
     1,
     2,
